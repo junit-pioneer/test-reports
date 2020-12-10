@@ -1,0 +1,8 @@
+# NOTE: The URLs need a trailing slash or the selected nav element
+#       won't be highlighted.
+  - title: Reports
+    children:
+      - title: "Issue Report"
+        url: /docs/issue-report/
+
+
