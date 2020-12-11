@@ -11,8 +11,10 @@
 package org.junitpioneer.testreports.issuereport.listreader;
 
 import java.io.File;
-import java.util.*;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 import org.junitpioneer.testreports.issuereport.config.IssueReportConfig;
 import org.junitpioneer.testreports.issuereport.jaxb.IssueType;
@@ -21,10 +23,6 @@ import org.junitpioneer.testreports.issuereport.jaxb.IssueType;
  * Reader to retrieve a list of issues.
  */
 public class IssueListReader {
-
-	private static Logger LOG = Logger.getAnonymousLogger();
-
-	private Set<IssueType> issues = new HashSet<>();
 
 	public List<IssueType> readIssues() {
 
@@ -38,7 +36,7 @@ public class IssueListReader {
 				break;
 		}
 		String fileName = buildFileName();
-		issues = reader.readFile(fileName);
+		Set<IssueType> issues = reader.readFile(fileName);
 
 		return new ArrayList<>(issues);
 	}
