@@ -1,0 +1,6 @@
+# NOTE: The URLs need a trailing slash or the selected nav element
+#       won't be highlighted.
+  - title: Test Report Features
+    children:
+      - title: "How To"
+        url: /docs/how-to-test-reports/

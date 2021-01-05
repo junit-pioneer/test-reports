@@ -1,0 +1,9 @@
+---
+excerpt: 'Reports on tests. :)<br/> <small>Released on [GitHub](https://github.com/junit-pioneer/test-reports/releases), [JCenter](https://jcenter.bintray.com/org/junit-pioneer/test-reports/), and [Maven Central](https://mvnrepository.com/artifact/org.junit-pioneer/test-reports) under<br /><span class="coordinates">`org.junit-pioneer : test-reports : @tr:version`</span></small><br/><br/> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="145px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=star&count=true&size=large" frameborder="0" scrolling="0" width="138px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="138px" height="30px"></iframe>{:/nomarkdown}'
+---
+:page-layout: single
+:page-permalink: /test-reports/
+:page-header: { overlay_image: {site-images}/test-reports-full.jpg, title_alignment: left }
+:page-title: Test Reports
+
+A description of the very cool Test Reports.
