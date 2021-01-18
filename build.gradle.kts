@@ -42,6 +42,10 @@ dependencies {
 	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.1.0")
 	implementation(group = "org.junit.jupiter", name = "junit-jupiter-engine")
 
+	implementation(group = "com.opencsv", name = "opencsv", version = "5.3")
+	implementation(group = "javax.xml.bind", name = "jaxb-api", version = "2.3.1")
+	implementation(group = "com.sun.xml.bind", name = "jaxb-impl", version = "2.3.3")
+
 	testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api")
 
 	testImplementation(group = "org.assertj", name = "assertj-core", version = "3.17.2")
