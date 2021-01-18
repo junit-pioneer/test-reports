@@ -1,15 +1,21 @@
 version: 2
 
 updates:
-- package-ecosystem: gradle
-  directory: "/"
-  schedule:
-    interval: monthly
-  ignore:
-    - dependency-name: "org.junit.*"
-    - dependency-name: "org.junit-pioneer.*"
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: "org.junit.*"
+      - dependency-name: "org.junit-pioneer.*"
+    labels:
+      - "📖 theme: build"
+      - "🛸 3rd-party: Gradle"
 
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: monthly
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    labels:
+      - "📖 theme: infrastructure"
+      - "🛸 3rd-party: Github Actions"
