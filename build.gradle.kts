@@ -44,7 +44,7 @@ dependencies {
 
 	implementation(group = "com.opencsv", name = "opencsv", version = "5.3")
 	implementation(group = "javax.xml.bind", name = "jaxb-api", version = "2.3.1")
-	implementation(group = "com.sun.xml.bind", name = "jaxb-impl", version = "2.3.3")
+	implementation(group = "com.sun.xml.bind", name = "jaxb-impl", version = "3.0.0")
 
 	testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api")
 
