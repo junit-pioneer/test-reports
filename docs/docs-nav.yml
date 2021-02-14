@@ -4,3 +4,5 @@
     children:
       - title: "How To"
         url: /docs/how-to-test-reports/
+      - title: "Issue Report"
+        url: /docs/issue-report/

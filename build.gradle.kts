@@ -3,8 +3,8 @@ plugins {
 	jacoco
 	checkstyle
 	`maven-publish`
-	id("com.diffplug.gradle.spotless") version "4.0.0"
-	id("org.shipkit.java") version "2.3.1"
+	id("com.diffplug.spotless") version "5.9.0"
+	id("org.shipkit.java") version "2.3.5"
 	id("at.zierler.yamlvalidator") version "1.5.0"
 	//id("org.sonarqube") version "3.0"
 	id("org.moditect.gradleplugin") version "1.0.0-rc3"
@@ -39,17 +39,21 @@ val junitVersion : String by project
 dependencies {
 	implementation(platform("org.junit:junit-bom:$junitVersion"))
 
-	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.1.0")
+	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.3.0")
 	implementation(group = "org.junit.jupiter", name = "junit-jupiter-engine")
+
+	implementation(group = "com.opencsv", name = "opencsv", version = "5.3")
+	implementation(group = "javax.xml.bind", name = "jaxb-api", version = "2.3.1")
+	implementation(group = "com.sun.xml.bind", name = "jaxb-impl", version = "2.3.3")
 
 	testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api")
 
-	testImplementation(group = "org.assertj", name = "assertj-core", version = "3.17.2")
-	testImplementation(group = "org.mockito", name = "mockito-core", version = "3.3.3")
-	testImplementation(group = "com.google.jimfs", name = "jimfs", version = "1.1")
+	testImplementation(group = "org.assertj", name = "assertj-core", version = "3.19.0")
+	testImplementation(group = "org.mockito", name = "mockito-core", version = "3.7.7")
+	testImplementation(group = "com.google.jimfs", name = "jimfs", version = "1.2")
 
-	testRuntimeOnly(group = "org.apache.logging.log4j", name = "log4j-core", version = "2.12.1")
-	testRuntimeOnly(group = "org.apache.logging.log4j", name = "log4j-jul", version = "2.12.1")
+	testRuntimeOnly(group = "org.apache.logging.log4j", name = "log4j-core", version = "2.14.0")
+	testRuntimeOnly(group = "org.apache.logging.log4j", name = "log4j-jul", version = "2.14.0")
 }
 
 spotless {
