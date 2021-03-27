@@ -39,7 +39,7 @@ val junitVersion : String by project
 dependencies {
 	implementation(platform("org.junit:junit-bom:$junitVersion"))
 
-	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.3.0")
+	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.3.8")
 	implementation(group = "org.junit.jupiter", name = "junit-jupiter-engine")
 
 	implementation(group = "com.opencsv", name = "opencsv", version = "5.3")
