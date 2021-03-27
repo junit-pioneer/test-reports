@@ -3,7 +3,7 @@ plugins {
 	jacoco
 	checkstyle
 	`maven-publish`
-	id("com.diffplug.spotless") version "5.9.0"
+	id("com.diffplug.spotless") version "5.10.2"
 	id("org.shipkit.java") version "2.3.5"
 	id("at.zierler.yamlvalidator") version "1.5.0"
 	//id("org.sonarqube") version "3.0"
@@ -39,7 +39,7 @@ val junitVersion : String by project
 dependencies {
 	implementation(platform("org.junit:junit-bom:$junitVersion"))
 
-	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.3.0")
+	implementation(group = "org.junit-pioneer", name = "junit-pioneer", version = "1.3.8")
 	implementation(group = "org.junit.jupiter", name = "junit-jupiter-engine")
 
 	implementation(group = "com.opencsv", name = "opencsv", version = "5.3")
