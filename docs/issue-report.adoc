@@ -10,7 +10,7 @@ At the end it will a report is generated and published.
 
 == Usage
 
-This section covers how to use the library.
+This section covers how to use the Issue report provider.
 Some things are configurable - see [configuration](#configuration) section for further details.
 
 === Provide list of issues
@@ -49,7 +49,7 @@ This example shows a report which include:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<issueReport xmlns="https://com.github.bukama.ir/01.00">
+<issueReport xmlns="https://org.junitpioneer.testreports.issuereport/01.00">
     <issues>
         <issue issueId="req222" description="Sample description" priority="HIGH">
             <summary total="1" successful="1" failed="0" aborted="0"/>
@@ -71,9 +71,11 @@ This example shows a report which include:
 Several values are configurable by system properties.
 The following table shows the keys and default value (a `-` means no value is set).
 
+|==========================
 | Key | Default value | Description |
-| --- | --- | --- |
-| com.github.bukama.ir.issuelist.directory | - | Subdirectory of the issue list. The directory will be prefixed with "." and the the value of File.separator, together e.g "./". |
-| com.github.bukama.ir.issuelist.filename | issuelist | Filename of the issue list without extension or path |
-| com.github.bukama.ir.issuelist.extension | csv | File extension of the issue list |
-| com.github.bukama.ir.report.directory | target/reports | Directory where the report is generated (without trailing slash). The directory will be prefixed with "." and the the value of File.separator, together e.g "./". |
+| org.junitpioneer.testreports.issuereport.issuelist.directory | - | Subdirectory of the issue list. The directory will be prefixed with "." and the the value of File.separator, together e.g "./". |
+| org.junitpioneer.testreports.issuereport.issuelist.filename | issuelist | Filename of the issue list without extension or path |
+| org.junitpioneer.testreports.issuereport.issuelist.extension | csv | File extension of the issue list |
+| org.junitpioneer.testreports.issuereport.issuelist.csv.skipfirstline | false | Skip first line of the CSV file|
+| org.junitpioneer.testreports.issuereport.report.directory | target/reports | Directory where the report is generated (without trailing slash). The directory will be prefixed with "." and the the value of File.separator, together e.g "./". |
+|==========================
