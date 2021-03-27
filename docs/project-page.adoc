@@ -12,5 +12,5 @@ The `Test Reports` provides additional information in (new) reports of the test 
 The project was initialized as the current JUnit test report can not publish additional attributes or information, e.g. values created by extensions.
 The library itself does not create one single report, but provides test report provide the user can use.
 For example the first report provider (added to this library) gathers information published by the https://junit-pioneer.org/docs/issue/[Pioneer Issue extension] and creates a report which contains information about issues, corresponding tests and their results.
-For more information see the https://junit-pioneer.org/docs/test-reports/docs/issue-report[Issue report documentation].
+For more information see the ../issue-report.adoc[Issue report documentation].
 

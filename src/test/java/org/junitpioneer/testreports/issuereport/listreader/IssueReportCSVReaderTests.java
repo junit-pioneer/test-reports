@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.SetSystemProperty;
 import org.junitpioneer.testreports.issuereport.jaxb.IssueType;
 
-@SetSystemProperty(key = "com.github.bukama.ir.issuelist.directory", value = "examples")
+@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.directory", value = "examples")
 public class IssueReportCSVReaderTests {
 
 	IssueReportCSVReader sut;
@@ -34,8 +34,8 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "oneLine")
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.csv.skipfirstline", value = "false")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "oneLine")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.csv.skipfirstline", value = "false")
 	void processFileWithOneLine() {
 		IssueType expected = new IssueType("req-123", "description with spaces", "HIGH");
 
@@ -47,8 +47,8 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "threeLines")
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.csv.skipfirstline", value = "false")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "threeLines")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.csv.skipfirstline", value = "false")
 	void processFileWithThreeLines() {
 		List<IssueType> expectedIssues = new ArrayList<>();
 		expectedIssues.add(new IssueType("req-123", "description with spaces", "HIGH"));
@@ -64,8 +64,8 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "oneLine")
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.csv.skipfirstline", value = "true")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "oneLine")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.csv.skipfirstline", value = "true")
 	void processLineSkipFirstLine() {
 		String fileName = issueListReader.buildFileName();
 		List<IssueType> actual = new ArrayList<>(sut.readFile(fileName));
@@ -74,7 +74,7 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "tooMuchElements")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "tooMuchElements")
 	void tooMuchElementsInLine() {
 		String fileName = issueListReader.buildFileName();
 
@@ -84,7 +84,7 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "tooLessElements")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "tooLessElements")
 	void tooLessElementsInLine() {
 		String fileName = issueListReader.buildFileName();
 
@@ -94,7 +94,7 @@ public class IssueReportCSVReaderTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.filename", value = "nonexisting")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.filename", value = "nonexisting")
 	void FileNotFound() {
 		String fileName = issueListReader.buildFileName();
 
