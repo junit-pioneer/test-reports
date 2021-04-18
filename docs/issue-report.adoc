@@ -40,7 +40,7 @@ The report lists every issue provided by the issue list and extracted from the I
 For each issue a summary of the test results and the tests itself (including their name and result) are listed.
 The report (`issueReport.xml`) is always published in XML-format using JAXB under `target/report` (default) .
 
-_Further formats, e.g. HTML, are planed and will then be configurable._
+_Further formats, e.g. HTML, are planned and will then be configurable._
 
 === Example
 This example shows a report which include:
