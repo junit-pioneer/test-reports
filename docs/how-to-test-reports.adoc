@@ -1,0 +1,30 @@
+:page-title: How to use Test Reports
+:page-description: Explains how to use test reports
+
+== Usage
+
+To make general use of this library just add the dependency to your project.
+Don't forget to add the libraries version you want to use.
+
+Maven:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.junit-pioneer</groupId>
+	<artifactId>test-reports</artifactId>
+	<version><!-- ... --><version>
+	<scope>test</scope>
+</dependency>
+----
+
+Gradle:
+
+[source,groovy]
+----
+testCompile group: 'org.junit-pioneer', name: 'test-reports', version: /* ... */
+----
+
+How to use certain report provider, please take a look at the providers own page.
+
+

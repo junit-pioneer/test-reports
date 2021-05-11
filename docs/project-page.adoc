@@ -1,0 +1,16 @@
+---
+excerpt: 'Reports on tests. :)<br/> <small>Released on [GitHub](https://github.com/junit-pioneer/test-reports/releases), [JCenter](https://jcenter.bintray.com/org/junit-pioneer/test-reports/), and [Maven Central](https://mvnrepository.com/artifact/org.junit-pioneer/test-reports) under<br /><span class="coordinates">`org.junit-pioneer : test-reports : @tr:version`</span></small><br/><br/> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="145px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=star&count=true&size=large" frameborder="0" scrolling="0" width="138px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=junit-pioneer&repo=test-reports&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="138px" height="30px"></iframe>{:/nomarkdown}'
+---
+:page-layout: single
+:page-permalink: /test-reports/
+:page-header: { overlay_image: {site-images}/test-reports-full.jpg, title_alignment: left }
+:page-title: Test Reports
+
+== Motivation
+
+The `Test Reports` provides additional information in (new) reports of the test results.
+The project was started as the current JUnit test report can not publish additional attributes or information, e.g. values created by extensions.
+The library provides test report provider(s) the user can use.
+For example the first report provider (added to this library) gathers information published by the https://junit-pioneer.org/docs/issue/[Pioneer Issue extension] and creates a report which contains information about issues, corresponding tests and their results.
+For more information see the ../issue-report.adoc[Issue report documentation].
+

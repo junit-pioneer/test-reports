@@ -26,7 +26,7 @@ public class ConfigTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.extension", value = "xml")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.extension", value = "xml")
 	void readProvidedStringValue() {
 		String expected = "xml";
 		String actual = IssueReportConfig.ISSUELIST_EXTENSION.asString();
@@ -35,7 +35,7 @@ public class ConfigTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.csv.skipfirstline", value = "true")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.csv.skipfirstline", value = "true")
 	void readBooleanValue() {
 		boolean actual = IssueReportConfig.ISSUELIST_CSV_SKIPFIRSTLINE.asBoolean();
 

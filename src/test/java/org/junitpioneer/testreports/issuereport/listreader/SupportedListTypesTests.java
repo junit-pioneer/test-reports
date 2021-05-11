@@ -19,7 +19,7 @@ import org.junitpioneer.jupiter.SetSystemProperty;
 public class SupportedListTypesTests {
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.extension", value = "csv")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.extension", value = "csv")
 	void supportedTypeLowercase() {
 		SupportedListTypes expected = SupportedListTypes.CSV;
 		SupportedListTypes actual = SupportedListTypes.byConfig();
@@ -28,7 +28,7 @@ public class SupportedListTypesTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.extension", value = "CSV")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.extension", value = "CSV")
 	void supportedTypeUppercase() {
 		SupportedListTypes expected = SupportedListTypes.CSV;
 		SupportedListTypes actual = SupportedListTypes.byConfig();
@@ -37,7 +37,7 @@ public class SupportedListTypesTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.extension", value = " CSV ")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.extension", value = " CSV ")
 	void supportedTypeTrimmed() {
 		SupportedListTypes expected = SupportedListTypes.CSV;
 		SupportedListTypes actual = SupportedListTypes.byConfig();
@@ -46,7 +46,7 @@ public class SupportedListTypesTests {
 	}
 
 	@Test
-	@SetSystemProperty(key = "com.github.bukama.ir.issuelist.extension", value = "NotSupported")
+	@SetSystemProperty(key = "org.junitpioneer.testreports.issuereport.issuelist.extension", value = "NotSupported")
 	void notSupportedType() {
 		assertThatThrownBy(SupportedListTypes::byConfig)
 				.isInstanceOf(IllegalArgumentException.class)
