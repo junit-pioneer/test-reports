@@ -7,7 +7,6 @@ plugins {
     id("org.shipkit.java") version "2.3.5"
     id("at.zierler.yamlvalidator") version "1.5.0"
     //id("org.sonarqube") version "3.0"
-    id("org.moditect.gradleplugin") version "1.0.0-rc3"
 }
 
 plugins.withType<JavaPlugin>().configureEach {
@@ -19,15 +18,9 @@ plugins.withType<JavaPlugin>().configureEach {
 group = "org.junit-pioneer"
 description = "Additional test reports for JUnit Jupiter and its extensions"
 
-val modularBuild = findProperty("modularBuild") != null;
 
 java {
-    if (modularBuild) {
-        sourceCompatibility = JavaVersion.VERSION_11
-    } else {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-    }
-
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
@@ -66,18 +59,6 @@ spotless {
 
         trimTrailingWhitespace()
         endWithNewline()
-        removeUnusedImports()
-    }
-
-    format("groovy") {
-        target("**/*.groovy")
-        indentWithTabs()
-        trimTrailingWhitespace()
-        endWithNewline()
-        licenseHeaderFile(headerFile, "package ")
-
-        replaceRegex("class-level Javadoc indentation fix", """^\*""", " *")
-        replaceRegex("nested Javadoc indentation fix", "\t\\*", "\t *")
     }
 }
 
@@ -92,7 +73,7 @@ yamlValidator {
 }
 
 jacoco {
-    toolVersion = "0.8.6"
+    toolVersion = "0.8.8"
 }
 
 // Until project is created
@@ -107,22 +88,12 @@ jacoco {
 //	}
 //}
 
-//moditect {
-//	addMainModuleInfo {
-//		version = project.version
-//		overwriteExistingFiles.set(true)
-//		module {
-//			moduleInfoFile = rootProject.file("src/main/module/module-info.java")
-//		}
-//	}
-//}
 
 tasks {
 
     sourceSets {
         main {
-            if (modularBuild)
-                java.srcDir("src/main/module")
+
         }
     }
 
